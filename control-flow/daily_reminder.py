@@ -6,9 +6,9 @@ print()
 match priority:
     case "high":
         if time_bound == "yes":
-            print(f"'{task}' is a high priority task that requires immediate attention today!")
+            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
         if time_bound == "no":
-            print(f"'{task}' is a high priority task but doesn't require immediate action")
+            print(f"Reminder: '{task}' is a high priority task but doesn't require immediate action")
     case "medium":
         if time_bound == "yes":
             print(f"'{task}' is a medium priority task that requires immediate attention today!")
@@ -16,6 +16,6 @@ match priority:
             print(f"'{task}' is a medium priority task but doesn't require immediate action")
     case "low":
         if time_bound == "yes":
-            print(f"'{task}' is a low priority task that requires immediate attention today!")
+            print(f"Note: '{task}' is a low priority task that requires immediate attention today!")
         if time_bound == "no":
-            print(f"'{task}' is a low priority task but doesn't require immediate action")
+            print(f"Note: '{task}' is a low priority task but doesn't require immediate action")
