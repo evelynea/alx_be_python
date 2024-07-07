@@ -17,4 +17,4 @@ elif temperature_type == "C":
     conversion = convert_to_fahrenheit(temperature)
     print(f'{temperature}°C is {conversion}°F')
 else:
-    print("invalid temperature. Please enter a numeric value")
+    print("invalid temperature. Please enter a numeric value.")
