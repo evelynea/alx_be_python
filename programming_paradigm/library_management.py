@@ -20,14 +20,14 @@ class Book:
 
 class Library:
     def __init__(self):
-        self.books = []
+        self._books = []
 
     def add_book(self, new_book):
-        self.books.append(new_book)
+        self._books.append(new_book)
         return f"New book added"
 
     def check_out_book(self, title):
-        for book in self.books:
+        for book in self._books:
             if book.title == title:
                 if book.is_available():
                     book.check_out()
@@ -36,7 +36,7 @@ class Library:
         return f'"{title}" is not available in the library.'
     
     def return_book(self, title):
-        for book in self.books:
+        for book in self._books:
             if book.title == title:
                 if not book.is_available():
                     book.return_book()
@@ -45,7 +45,7 @@ class Library:
         return f'"{title}" does not belong to this library.'
 
     def list_available_books(self):
-        available_books = [book for book in self.books if book.is_available()]
+        available_books = [book for book in self._books if book.is_available()]
         if available_books:
             for book in available_books:
                 print(f'Title: {book.title}, Author: {book.author}')
