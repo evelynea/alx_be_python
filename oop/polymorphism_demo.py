@@ -2,7 +2,7 @@ import math
 
 class Shape:
     def area(self):
-        raise NotImplementedError("Subclasses ,,,")
+        raise NotImplementedError("Subclasses must implement this method")
 
 class Rectangle(Shape):
     def __init__(self, length, width):
@@ -18,3 +18,7 @@ class Circle(Shape):
 
     def area(self):
         return math.pi * (self.radius ** 2)
+    
+# Demonstrating polymorphism
+def print_area(shape):
+    print(f"The area of the shape is: {shape.area()}")
