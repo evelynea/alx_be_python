@@ -3,6 +3,9 @@ class Book:
         self.title = title
         self.author = author
 
+    def __str__(self):
+        return f"{self.title}"
+
 #inheritance
 class EBook(Book):
     def __init__(self, title, author,file_size):
